@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio JS</title>
+</head>
+<body>
+
+    <h2>Esercizio in JavaScript</h2>
+    <p>
+        Chiedi 2 numeri all'utente.<br />
+        Se il primo è maggiore di 10 scrivi "FUORI SCALA".<br />
+        Se il secondo numero è maggiore di 50 scrivi "TROPPO GRANDE".<br />
+        Se non hai stampato nulla allora stampa "TUTTO OK"<br />
+    </p>
+
+    <br />
+    <br />
+
+    <button onclick="eseguiEsercizio()">Esegui Esercizio</button>
+
+    <script>
+        function eseguiEsercizio() {
+
+            // Chiedi all'utente due numeri
+            let primoNumero = parseInt(prompt("Inserisci il primo numero:"));
+            let secondoNumero = parseInt(prompt("Inserisci il secondo numero:"));
+
+            // Controlla che entrambe le condizioni non siano soddisfatte.
+            if (primoNumero < 10) {
+                if (secondoNumero < 50) {
+                    alert("TUTTO OK");
+                }
+            }
+
+            // Controlla che il numero sia minore di 10
+            if (primoNumero > 10) {
+                alert("FUORI SCALA");
+            }
+
+            // Controlla che il numero sia maggiore di 50
+            if (secondoNumero > 50) {
+                alert("TROPPO GRANDE");
+            }
+
+        }</script>
+
+</body>
+</html>
