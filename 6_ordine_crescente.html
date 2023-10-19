@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio JS</title>
+</head>
+<body>
+
+    <h2>Esercizio 6 in JavaScript</h2>
+    <p>
+        Chiedi 3 numeri all'utente.<br />
+        Ordinali in ordine crescente
+    </p>
+
+    <br />
+    <br />
+
+    <button onclick="eseguiEsercizio()">Esegui Esercizio</button>
+
+    <script>
+
+
+        function eseguiEsercizio() {
+
+            // Chiedi all'utente due numeri
+            let n1 = parseInt(prompt("Inserisci il primo numero:"));
+            let n2 = parseInt(prompt("Inserisci il secondo numero:"));
+            let n3 = parseInt(prompt("Inserisci il terzo numero:"));
+
+            ordinaNumeri(n1, n2, n3);
+
+        }
+
+        function ordinaNumeri(num1, num2, num3) {
+            let primo, secondo, terzo;
+
+            if (num1 < num2) {
+                if (num1 < num3) {
+                    primo = num1;
+                    if (num2 < num3) {
+                        secondo = num2;
+                        terzo = num3;
+                    } else {
+                        secondo = num3;
+                        terzo = num2;
+                    }
+                } else {
+                    primo = num3;
+                    secondo = num1;
+                    terzo = num2;
+                }
+            } else {
+                if (num2 < num3) {
+                    primo = num2;
+                    if (num1 < num3) {
+                        secondo = num1;
+                        terzo = num3;
+                    } else {
+                        secondo = num3;
+                        terzo = num1;
+                    }
+                } else {
+                    primo = num3;
+                    secondo = num2;
+                    terzo = num1;
+                }
+            }
+
+            var message = `Numeri ordinati in modo crescente: ${primo}, ${secondo}, ${terzo}`;
+
+            // Visualizzare i numeri ordinati
+            console.log(message);
+            alert(message);
+
+
+        }
+
+        
+
+
+    </script>
+
+</body>
+</html>
+
